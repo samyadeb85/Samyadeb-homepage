@@ -3,69 +3,105 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Personal academic homepage of Samyadeb Bhattacharya">
+<meta name="description" content="Academic homepage of Samyadeb Bhattacharya, Assistant Professor at IIIT Hyderabad working in quantum information science, quantum thermodynamics, open quantum systems and quantum device engineering.">
+<meta name="theme-color" content="#07111f">
 <title>Samyadeb Bhattacharya | Quantum Science & Technology</title>
 <style>
 :root{
-  --bg:#f7f8fb; --surface:#ffffff; --text:#172033; --muted:#5f6b7a;
-  --accent:#274c77; --accent2:#6096ba; --line:#e4e8ef; --nav:#101827;
+  --bg:#f6f8fb;--surface:#fff;--ink:#102033;--muted:#617083;--line:#e3e9f1;
+  --nav:#07111f;--accent:#2c6e91;--accent2:#8bc4d8;--soft:#eaf4f7;--max:1160px;
 }
 *{box-sizing:border-box;scroll-behavior:smooth}
-body{margin:0;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-background:var(--bg);color:var(--text);line-height:1.7}
-a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
-nav{position:sticky;top:0;z-index:10;background:rgba(16,24,39,.96);backdrop-filter:blur(10px)}
-.nav-inner{max-width:1120px;margin:auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between}
-.brand{color:white;font-weight:700;letter-spacing:.2px}
-.navlinks{display:flex;gap:20px;flex-wrap:wrap}
-.navlinks a{color:#dbe5f1;font-size:.92rem}
-.hero{background:linear-gradient(135deg,#101827 0%,#203b5b 58%,#376a8c 100%);color:white}
-.hero-inner{max-width:1120px;margin:auto;padding:92px 24px 84px}
-.kicker{text-transform:uppercase;letter-spacing:2px;color:#b8d5e8;font-size:.8rem;font-weight:700}
-h1{font-size:clamp(2.6rem,7vw,5.2rem);line-height:1.02;margin:14px 0 18px;letter-spacing:-2px}
-.hero p{max-width:820px;color:#dbe8f2;font-size:1.13rem}
-.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
-.btn{display:inline-block;padding:11px 18px;border-radius:999px;border:1px solid rgba(255,255,255,.25);color:white;background:rgba(255,255,255,.1)}
-.btn.primary{background:white;color:#172033}
-main{max-width:1120px;margin:auto;padding:0 24px}
-section{padding:72px 0;border-bottom:1px solid var(--line)}
+html{scroll-padding-top:78px}
+body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink);line-height:1.72}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+nav{position:sticky;top:0;z-index:20;background:rgba(7,17,31,.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.08)}
+.nav-inner{max-width:var(--max);margin:auto;padding:13px 24px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{color:#fff;font-weight:760;letter-spacing:.15px;white-space:nowrap}
+.navlinks{display:flex;gap:18px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+.navlinks a{color:#dce7f1;font-size:.88rem}
+.navlinks a:hover{color:#fff;text-decoration:none}
+.hero{background:
+ radial-gradient(circle at 82% 18%,rgba(139,196,216,.22),transparent 27%),
+ linear-gradient(135deg,#07111f 0%,#12324d 58%,#285f7a 100%);color:#fff}
+.hero-inner{max-width:var(--max);margin:auto;padding:94px 24px 82px}
+.kicker{display:inline-flex;gap:9px;align-items:center;text-transform:uppercase;letter-spacing:2px;color:#b9ddea;font-size:.76rem;font-weight:800}
+.kicker:before{content:"";width:28px;height:2px;background:var(--accent2)}
+h1{font-size:clamp(2.9rem,7vw,5.8rem);line-height:.98;margin:18px 0 22px;letter-spacing:-3px}
+.hero p{max-width:850px;color:#dce9f1;font-size:1.12rem;margin:0}
+.hero-meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.pill{border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.07);padding:7px 12px;border-radius:999px;color:#dce9f1;font-size:.84rem}
+.buttons{display:flex;gap:11px;flex-wrap:wrap;margin-top:30px}
+.btn{display:inline-block;padding:11px 18px;border-radius:10px;border:1px solid rgba(255,255,255,.25);color:#fff;background:rgba(255,255,255,.08);font-weight:650}
+.btn:hover{text-decoration:none;background:rgba(255,255,255,.15)}
+.btn.primary{background:#fff;color:#102033;border-color:#fff}
+main{max-width:var(--max);margin:auto;padding:0 24px}
+section{padding:76px 0;border-bottom:1px solid var(--line)}
 .section-head{display:flex;justify-content:space-between;gap:24px;align-items:end;margin-bottom:30px}
-h2{font-size:2rem;margin:0;letter-spacing:-.5px}
-.lead{color:var(--muted);max-width:800px}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:0 8px 30px rgba(20,30,50,.05)}
-.card h3{margin-top:0;font-size:1.08rem}
-.card p{color:var(--muted);margin-bottom:0}
+h2{font-size:2rem;line-height:1.2;margin:0;letter-spacing:-.7px}
+h3{line-height:1.35}
+.lead{color:var(--muted);max-width:820px}
+.intro{font-size:1.05rem;max-width:920px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:0 9px 32px rgba(18,32,51,.055)}
+.card h3{margin:0 0 9px;font-size:1.08rem}
+.card p{color:var(--muted);margin:0}
+.card .tag{display:inline-block;margin-bottom:15px;font-size:.72rem;text-transform:uppercase;letter-spacing:1.1px;color:var(--accent);font-weight:800}
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:28px}
-.stat{padding:20px;background:var(--surface);border:1px solid var(--line);border-radius:16px;text-align:center}
-.stat strong{display:block;font-size:1.8rem;color:var(--accent)}
-.stat span{font-size:.85rem;color:var(--muted)}
-.pub{padding:20px 0;border-top:1px solid var(--line)}
+.stat{padding:19px;background:var(--surface);border:1px solid var(--line);border-radius:16px;text-align:center}
+.stat strong{display:block;font-size:1.8rem;color:var(--accent);line-height:1.2}
+.stat span{display:block;font-size:.82rem;color:var(--muted);margin-top:5px}
+.pub{padding:21px 0;border-top:1px solid var(--line)}
 .pub:first-child{border-top:0}
-.pub-title{font-weight:700;color:var(--text)}
-.pub-meta{color:var(--muted);font-size:.92rem;margin-top:4px}
-.timeline{border-left:2px solid #cfd8e3;padding-left:26px}
-.item{position:relative;margin:0 0 28px}
-.item:before{content:"";position:absolute;left:-35px;top:9px;width:12px;height:12px;border-radius:50%;background:var(--accent2)}
-.year{font-weight:700;color:var(--accent)}
-footer{background:#101827;color:#b9c6d4;padding:42px 24px}
-.footer-inner{max-width:1120px;margin:auto}
+.pub-title{font-weight:750;color:var(--ink)}
+.pub-meta{color:var(--muted);font-size:.91rem;margin-top:4px}
+.pub-links{margin-top:7px;font-size:.86rem}
+.timeline{border-left:2px solid #cbd7e3;padding-left:27px}
+.item{position:relative;margin:0 0 29px}
+.item:before{content:"";position:absolute;left:-35px;top:9px;width:11px;height:11px;border-radius:50%;background:var(--accent2);box-shadow:0 0 0 4px var(--bg)}
+.year{font-weight:800;color:var(--accent);font-size:.9rem}
+.split{display:grid;grid-template-columns:1.25fr .75fr;gap:24px;align-items:start}
+.list{margin:0;padding-left:19px}
+.list li{margin:8px 0}
+.callout{background:linear-gradient(135deg,#edf6f8,#f8fbfc);border:1px solid #d7e8ed;border-radius:18px;padding:25px}
+.callout strong{color:var(--ink)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.link-list{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.link-chip{display:inline-block;padding:9px 13px;border-radius:10px;background:var(--soft);border:1px solid #d4e6eb;font-weight:650}
+.link-chip:hover{text-decoration:none;background:#e0f0f4}
+footer{background:#07111f;color:#b9c9d7;padding:44px 24px}
+.footer-inner{max-width:var(--max);margin:auto}
 footer a{color:#d9e8f5}
-@media(max-width:800px){
- .nav-inner{align-items:flex-start;gap:12px;flex-direction:column}
- .grid,.stats{grid-template-columns:1fr}
- .hero-inner{padding-top:64px}
+.small{font-size:.85rem;color:var(--muted)}
+@media(max-width:900px){
+ .nav-inner{align-items:flex-start;flex-direction:column}
+ .grid,.stats,.split,.contact-grid{grid-template-columns:1fr}
+ .navlinks{gap:11px 15px}
+ .hero-inner{padding-top:70px}
  .section-head{display:block}
+}
+@media(max-width:560px){
+ main{padding:0 18px}.hero-inner{padding-left:18px;padding-right:18px}
+ h1{letter-spacing:-2px}.nav-inner{padding-left:18px;padding-right:18px}
+ .navlinks a{font-size:.82rem}
 }
 </style>
 </head>
-<body>
+<body id="top">
 <nav>
   <div class="nav-inner">
     <div class="brand">Samyadeb Bhattacharya</div>
     <div class="navlinks">
-      <a href="#about">About</a><a href="#research">Research</a><a href="#publications">Publications</a>
-      <a href="#teaching">Teaching</a><a href="#career">Career</a><a href="#contact">Contact</a><a href="https://scholar.google.com/citations?user=I93u8gwAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener">Google Scholar</a><a href="https://arxiv.org/search/?query=Samyadeb+Bhattacharya&searchtype=all&source=header" target="_blank" rel="noopener">arXiv</a>
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#projects">Projects</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#career">Career</a>
+      <a href="#contact">Contact</a>
+      <a href="https://scholar.google.com/citations?user=I93u8gwAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener">Google Scholar</a>
+      <a href="https://arxiv.org/search/?query=Samyadeb+Bhattacharya&searchtype=all&source=header" target="_blank" rel="noopener">arXiv</a>
     </div>
   </div>
 </nav>
@@ -75,53 +111,77 @@ footer a{color:#d9e8f5}
     <div class="kicker">Quantum Science · Information · Thermodynamics</div>
     <h1>Samyadeb<br>Bhattacharya</h1>
     <p>Assistant Professor at the Centre for Quantum Science and Technology (CQST) and the Centre for Security, Theory and Algorithmic Research (CSTAR), International Institute of Information Technology Hyderabad.</p>
+    <div class="hero-meta">
+      <span class="pill">Quantum Information Science</span>
+      <span class="pill">Quantum Thermodynamics</span>
+      <span class="pill">Open Quantum Systems</span>
+      <span class="pill">Quantum Device Engineering</span>
+    </div>
     <div class="buttons">
       <a class="btn primary" href="#research">Explore research</a>
       <a class="btn" href="CV.pdf" target="_blank">View CV</a>
+      <a class="btn" href="https://scholar.google.com/citations?user=I93u8gwAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener">Google Scholar ↗</a>
+      <a class="btn" href="https://arxiv.org/search/?query=Samyadeb+Bhattacharya&searchtype=all&source=header" target="_blank" rel="noopener">arXiv ↗</a>
     </div>
   </div>
 </header>
 
 <main>
 <section id="about">
-  <div class="section-head"><div><h2>About</h2></div></div>
-  <p class="lead">My research lies in quantum information science, with emphasis on the thermodynamic and statistical analysis of information processing, quantum resource theories, Markovian and non-Markovian dynamics, quantum device engineering, and cavity quantum electrodynamics.</p>
+  <div class="section-head"><div><h2>About</h2><p class="lead">Research at the interface of quantum information, thermodynamics, dynamics and quantum hardware.</p></div></div>
+  <p class="intro">My research lies in quantum information science, with emphasis on the thermodynamic and statistical analysis of information processing, quantum resource theories, Markovian and non-Markovian dynamics, quantum device engineering, and cavity quantum electrodynamics.</p>
   <p>I joined IIIT Hyderabad in December 2019. My research program combines fundamental quantum information theory with experimentally motivated quantum hardware, cavity-QED systems, quantum thermo-electronics and quantum opto-mechanics.</p>
   <div class="stats">
-    <div class="stat"><strong>39</strong><span>refereed international journal papers listed in CV</span></div>
-    <div class="stat"><strong>801</strong><span>citations (CV, 22 Jun 2026)</span></div>
-    <div class="stat"><strong>13</strong><span>H-index (CV)</span></div>
-    <div class="stat"><strong>17</strong><span>i10-index (CV)</span></div>
+    <div class="stat"><strong>39</strong><span>Refereed international journal papers listed in CV</span></div>
+    <div class="stat"><strong>801</strong><span>Citations reported in CV · 22 Jun 2026</span></div>
+    <div class="stat"><strong>13</strong><span>H-index reported in CV</span></div>
+    <div class="stat"><strong>17</strong><span>i10-index reported in CV</span></div>
   </div>
 </section>
 
 <section id="research">
-  <div class="section-head">
-    <div><h2>Research</h2><p class="lead">A research program connecting quantum information theory, thermodynamics and quantum hardware.</p></div>
-  </div>
+  <div class="section-head"><div><h2>Research</h2><p class="lead">A connected research program spanning fundamental theory, quantum dynamics and device-oriented quantum science.</p></div></div>
   <div class="grid">
-    <article class="card"><h3>Quantum Thermo-Electric Circuits</h3><p>Quantum thermal analogues of electric circuits, heat-current driven architectures, thermal circuit components and steady-state quantum device engineering.</p></article>
-    <article class="card"><h3>Quantum Opto-Mechanics & Cavity QED</h3><p>Quantum devices modelled from cavity-QED and atom–mirror interaction platforms, including thermodynamic cycles and experimentally motivated device engineering.</p></article>
-    <article class="card"><h3>Quantum Dynamics & Resource Theories</h3><p>Non-Markovianity, ergodic channels, quantum activity, entanglement, coherence, information backflow and resource-theoretic descriptions of quantum dynamics.</p></article>
-    <article class="card"><h3>Open Quantum Systems</h3><p>Microscopic system–environment dynamics involving spin-boson, fermionic and finite-bath models, including approaches beyond standard Born–Markov restrictions.</p></article>
-    <article class="card"><h3>Quantum Information Processing</h3><p>Quantum switches, quantum channels, noise mitigation, entanglement and information-theoretic structures relevant to computation and communication.</p></article>
-    <article class="card"><h3>Quantum Metrology</h3><p>Metrological approaches for detecting unknown interaction Hamiltonians and probing complex quantum systems through circuit-inspired architectures.</p></article>
+    <article class="card"><span class="tag">01 · Devices</span><h3>Quantum Thermo-Electric Circuits</h3><p>Quantum thermal analogues of electric circuits, heat-current driven architectures, thermal circuit components and steady-state quantum device engineering.</p></article>
+    <article class="card"><span class="tag">02 · Hardware</span><h3>Quantum Opto-Mechanics & Cavity QED</h3><p>Quantum devices motivated by cavity-QED and atom–mirror interaction platforms, including thermodynamic cycles and experimentally relevant device models.</p></article>
+    <article class="card"><span class="tag">03 · Dynamics</span><h3>Quantum Dynamics & Resource Theories</h3><p>Non-Markovianity, ergodic channels, quantum activity, entanglement, coherence, information backflow and resource-theoretic descriptions of quantum dynamics.</p></article>
+    <article class="card"><span class="tag">04 · Open systems</span><h3>Open Quantum Systems</h3><p>Microscopic system–environment dynamics involving spin-boson, fermionic and finite-bath models, including approaches beyond standard Born–Markov restrictions.</p></article>
+    <article class="card"><span class="tag">05 · Information</span><h3>Quantum Information Processing</h3><p>Quantum switches, quantum channels, noise mitigation, entanglement and information-theoretic structures relevant to computation and communication.</p></article>
+    <article class="card"><span class="tag">06 · Metrology</span><h3>Quantum Metrology</h3><p>Metrological approaches for detecting unknown interaction Hamiltonians and probing complex quantum systems through circuit-inspired architectures.</p></article>
   </div>
 </section>
 
 <section id="publications">
-  <div class="section-head"><div><h2>Selected Publications</h2><p class="lead">Selected recent and representative publications from the CV.</p></div></div>
-  <div class="pub"><div class="pub-title">Quantum Thermal Analogs of Electric Circuits: A Universal Approach</div><div class="pub-meta">D. Tiwari, S. Bhattacharya, S. Banerjee · Physical Review Letters 135, 020404 (2025)</div></div>
-  <div class="pub"><div class="pub-title">Unravelling the non-Markovian spin-boson model and quantum quasi-Otto cycle</div><div class="pub-meta">S. H. Pradhan, H. M. Soufy, V. Anand, R. Chattopadhyay, S. Mitra, S. Bhattacharya · Physical Review A 112, 042222 (2025)</div></div>
-  <div class="pub"><div class="pub-title">Exploring Non-Markovianity in Ergodic Channels: Measuring Memory Retention through Ergotropy</div><div class="pub-meta">R. Basu, A. Chakraborty, H. Badhani, M. Alimuddin, S. Bhattacharya · Physical Review A 111, 032416 (2025)</div></div>
-  <div class="pub"><div class="pub-title">Emergent non-Markovianity and dynamical quantification of the quantum switch</div><div class="pub-meta">V. Anand, A. G. Maity, S. Mitra, S. Bhattacharya · Physical Review A 111, 032428 (2025)</div></div>
-  <div class="pub"><div class="pub-title">Using Quantum Switches to Mitigate Noise in Grover's Search Algorithm</div><div class="pub-meta">S. Srivastava, A. K. Pati, S. Bhattacharya, I. Chakrabarty · Journal of Physics A: Mathematical and Theoretical 58, 105304 (2025)</div></div>
-  <div class="pub"><div class="pub-title">Breaking absolute separability with quantum switch</div><div class="pub-meta">S. Yanamandra, P. V. Srinidhi, S. Bhattacharya, I. Chakrabarty, S. Goswami · Quantum Information Processing 24, 81 (2025)</div></div>
-  <div class="pub"><div class="pub-title">Interplay between the Hilbert-space dimension of a control system and the memory induced by a quantum SWITCH</div><div class="pub-meta">S. Mukherjee, B. Mallick, S. Yanamandra, S. Bhattacharya, A. G. Maity · Physical Review A 110, 042624 (2024)</div></div>
-  <div class="pub"><div class="pub-title">Quantum channels that destroy negative conditional entropy</div><div class="pub-meta">P. V. Srinidhi, I. Chakrabarty, S. Bhattacharya, N. Ganguly · Physical Review A 110, 042423 (2024)</div></div>
-  <div class="pub"><div class="pub-title">Relating CP divisibility of dynamical maps with compatibility of channels</div><div class="pub-meta">A. Mitra, D. Saha, S. Bhattacharya, A. S. Majumdar · Physical Review A 109, 062213 (2024)</div></div>
-  <div class="pub"><div class="pub-title">Activating information backflow with the assistance of quantum SWITCH</div><div class="pub-meta">A. G. Maity, S. Bhattacharya · Journal of Physics A: Mathematical and Theoretical 57, 215302 (2024)</div></div>
-  <p style="margin-top:26px;color:var(--muted)">The CV contains the broader publication list, including earlier work in quantum thermodynamics, non-Markovianity, coherence, entanglement and quantum dynamics.</p>
+  <div class="section-head"><div><h2>Selected Publications</h2><p class="lead">Selected recent and representative publications. The complete publication record is available through the CV, Google Scholar and arXiv.</p></div></div>
+  <div class="pub"><div class="pub-title">Quantum Thermal Analogs of Electric Circuits: A Universal Approach</div><div class="pub-meta">D. Tiwari, S. Bhattacharya, S. Banerjee · <em>Physical Review Letters</em> 135, 020404 (2025)</div></div>
+  <div class="pub"><div class="pub-title">Unravelling the non-Markovian spin-boson model and quantum quasi-Otto cycle</div><div class="pub-meta">S. H. Pradhan, H. M. Soufy, V. Anand, R. Chattopadhyay, S. Mitra, S. Bhattacharya · <em>Physical Review A</em> 112, 042222 (2025)</div></div>
+  <div class="pub"><div class="pub-title">Exploring Non-Markovianity in Ergodic Channels: Measuring Memory Retention through Ergotropy</div><div class="pub-meta">R. Basu, A. Chakraborty, H. Badhani, M. Alimuddin, S. Bhattacharya · <em>Physical Review A</em> 111, 032416 (2025)</div></div>
+  <div class="pub"><div class="pub-title">Emergent non-Markovianity and dynamical quantification of the quantum switch</div><div class="pub-meta">V. Anand, A. G. Maity, S. Mitra, S. Bhattacharya · <em>Physical Review A</em> 111, 032428 (2025)</div></div>
+  <div class="pub"><div class="pub-title">Using Quantum Switches to Mitigate Noise in Grover's Search Algorithm</div><div class="pub-meta">S. Srivastava, A. K. Pati, S. Bhattacharya, I. Chakrabarty · <em>Journal of Physics A: Mathematical and Theoretical</em> 58, 105304 (2025)</div></div>
+  <div class="pub"><div class="pub-title">Breaking absolute separability with quantum switch</div><div class="pub-meta">S. Yanamandra, P. V. Srinidhi, S. Bhattacharya, I. Chakrabarty, S. Goswami · <em>Quantum Information Processing</em> 24, 81 (2025)</div></div>
+  <div class="pub"><div class="pub-title">Interplay between the Hilbert-space dimension of a control system and the memory induced by a quantum SWITCH</div><div class="pub-meta">S. Mukherjee, B. Mallick, S. Yanamandra, S. Bhattacharya, A. G. Maity · <em>Physical Review A</em> 110, 042624 (2024)</div></div>
+  <div class="pub"><div class="pub-title">Quantum channels that destroy negative conditional entropy</div><div class="pub-meta">P. V. Srinidhi, I. Chakrabarty, S. Bhattacharya, N. Ganguly · <em>Physical Review A</em> 110, 042423 (2024)</div></div>
+  <div class="pub"><div class="pub-title">Relating CP divisibility of dynamical maps with compatibility of channels</div><div class="pub-meta">A. Mitra, D. Saha, S. Bhattacharya, A. S. Majumdar · <em>Physical Review A</em> 109, 062213 (2024)</div></div>
+  <div class="pub"><div class="pub-title">Activating information backflow with the assistance of quantum SWITCH</div><div class="pub-meta">A. G. Maity, S. Bhattacharya · <em>Journal of Physics A: Mathematical and Theoretical</em> 57, 215302 (2024)</div></div>
+  <div class="callout" style="margin-top:22px"><strong>Complete publication record</strong><br><span class="small">For the full list and citation metrics, see the <a href="https://scholar.google.com/citations?user=I93u8gwAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener">Google Scholar profile</a>, <a href="https://arxiv.org/search/?query=Samyadeb+Bhattacharya&searchtype=all&source=header" target="_blank" rel="noopener">arXiv author search</a>, or <a href="CV.pdf" target="_blank">CV</a>.</span></div>
+</section>
+
+<section id="projects">
+  <div class="section-head"><div><h2>Projects & Research Directions</h2><p class="lead">Selected directions and externally supported research activity documented in the CV.</p></div></div>
+  <div class="split">
+    <div class="grid" style="grid-template-columns:1fr 1fr">
+      <article class="card"><span class="tag">Quantum hardware</span><h3>Quantum Device Engineering</h3><p>Models of quantum diodes, transistors, rectifiers, LCR-like circuits, operational amplifiers and related quantum thermo-electronic architectures.</p></article>
+      <article class="card"><span class="tag">Quantum learning</span><h3>Quantum Machine Learning</h3><p>Collaborative research on quantum machine learning and quantum-information-inspired computational architectures.</p></article>
+      <article class="card"><span class="tag">Reservoir engineering</span><h3>Quantum Reservoir Engineering</h3><p>Engineering system–environment interactions to control steady states and dynamical properties of quantum devices.</p></article>
+      <article class="card"><span class="tag">Foundations</span><h3>Resources, Entanglement & Ergodic Theory</h3><p>Resource-theoretic and information-theoretic approaches to entanglement, coherence, quantum activity and quantum dynamics.</p></article>
+    </div>
+    <div class="callout">
+      <h3 style="margin-top:0">Supported research</h3>
+      <p><strong>MeitY / SERB (now ANRF) collaborative quantum machine learning project</strong></p>
+      <p class="small">Collaborative project · ₹93.6 lakh · 2024–2027 · Co-PI</p>
+      <p class="small">The project information above is based on the current CV. Additional grants, collaborations and project details can be added here as you provide them.</p>
+    </div>
+  </div>
 </section>
 
 <section id="teaching">
@@ -129,36 +189,49 @@ footer a{color:#d9e8f5}
   <div class="grid">
     <article class="card"><h3>Open Quantum Systems & Quantum Thermodynamics</h3><p>Research-oriented elective developed at IIIT Hyderabad, with emphasis on open-system dynamics and quantum thermodynamics.</p></article>
     <article class="card"><h3>Linear PDE & Calculus of Variance</h3><p>Advanced mathematics elective designed and developed at IIIT Hyderabad.</p></article>
-    <article class="card"><h3>Real Analysis</h3><p>Core UG1 course taught consistently over multiple academic years.</p></article>
+    <article class="card"><h3>Real Analysis</h3><p>Core undergraduate course taught over multiple academic years.</p></article>
   </div>
-  <p style="margin-top:26px">The CV records consistently strong teaching feedback and describes a teaching approach built around clear objectives, applications, problem solving, quizzes, assignments and research-oriented reading projects.</p>
+  <p style="margin-top:25px">The teaching approach documented in the CV emphasizes clear learning objectives, applications, problem solving, quizzes, assignments and research-oriented reading projects.</p>
 </section>
 
 <section id="career">
-  <div class="section-head"><div><h2>Academic Career</h2></div></div>
-  <div class="timeline">
-    <div class="item"><div class="year">Dec 2019 – present</div><strong>Assistant Professor</strong><br>CQST & CSTAR, IIIT Hyderabad</div>
-    <div class="item"><div class="year">Aug 2019 – Dec 2019</div><strong>Research Associate</strong><br>CeNT, University of Warsaw, Poland</div>
-    <div class="item"><div class="year">Oct 2017 – Aug 2019</div><strong>National Post Doctoral Fellow</strong><br>S. N. Bose National Centre for Basic Sciences, Kolkata</div>
-    <div class="item"><div class="year">Apr 2015 – Oct 2017</div><strong>Post Doctoral Fellow</strong><br>Quantum Information and Computation Group, Harish Chandra Research Institute</div>
+  <div class="section-head"><div><h2>Academic Career & Education</h2></div></div>
+  <div class="split">
+    <div class="timeline">
+      <div class="item"><div class="year">Dec 2019 – present</div><strong>Assistant Professor</strong><br>CQST & CSTAR, IIIT Hyderabad</div>
+      <div class="item"><div class="year">Aug 2019 – Dec 2019</div><strong>Research Associate</strong><br>CeNT, University of Warsaw, Poland</div>
+      <div class="item"><div class="year">Oct 2017 – Aug 2019</div><strong>National Post Doctoral Fellow</strong><br>S. N. Bose National Centre for Basic Sciences, Kolkata</div>
+      <div class="item"><div class="year">Apr 2015 – Oct 2017</div><strong>Post Doctoral Fellow</strong><br>Quantum Information and Computation Group, Harish Chandra Research Institute</div>
+    </div>
+    <div class="card">
+      <h3>Education</h3>
+      <p><strong>PhD, Physical Sciences</strong><br>University of Calcutta, 2015<br><span class="small">Host/funding institute: Indian Statistical Institute, Kolkata</span></p>
+      <p><strong>MSc, Physics</strong><br>University of Calcutta, 2008</p>
+      <p><strong>BSc (Hons.), Physics</strong><br>Asutosh College, University of Calcutta, 2006</p>
+    </div>
   </div>
-  <h3>Education</h3>
-  <p><strong>PhD, Physical Sciences</strong> — University of Calcutta, 2015 (host and funding institute: Indian Statistical Institute, Kolkata)</p>
-  <p><strong>MSc, Physics</strong> — University of Calcutta, 2008</p>
-  <p><strong>BSc (Hons.), Physics</strong> — Asutosh College, University of Calcutta, 2006</p>
 </section>
 
 <section id="contact">
-  <div class="section-head"><div><h2>Contact</h2><p class="lead">Academic affiliation and professional information.</p></div></div>
-  <div class="card">
-    <h3>Samyadeb Bhattacharya</h3>
-    <p>Assistant Professor<br>
-    Centre for Quantum Science and Technology (CQST)<br>
-    Centre for Security, Theory and Algorithmic Research (CSTAR)<br>
-    International Institute of Information Technology Hyderabad</p>
-    <p><a href="https://www.iiit.ac.in/" target="_blank" rel="noopener">IIIT Hyderabad</a></p>
-    <p><a href="https://scholar.google.com/citations?user=I93u8gwAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener">Google Scholar Profile →</a></p>
-    <p><a href="https://arxiv.org/search/?query=Samyadeb+Bhattacharya&searchtype=all&source=header" target="_blank" rel="noopener">arXiv Publications →</a></p>
+  <div class="section-head"><div><h2>Contact & Academic Links</h2><p class="lead">For academic collaboration, seminars, research discussions and professional enquiries.</p></div></div>
+  <div class="contact-grid">
+    <div class="card">
+      <h3>Samyadeb Bhattacharya</h3>
+      <p>Assistant Professor<br>
+      Centre for Quantum Science and Technology (CQST)<br>
+      Centre for Security, Theory and Algorithmic Research (CSTAR)<br>
+      International Institute of Information Technology Hyderabad</p>
+      <p><a href="https://www.iiit.ac.in/" target="_blank" rel="noopener">IIIT Hyderabad ↗</a></p>
+    </div>
+    <div class="card">
+      <h3>Profiles</h3>
+      <div class="link-list">
+        <a class="link-chip" href="https://scholar.google.com/citations?user=I93u8gwAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener">Google Scholar ↗</a>
+        <a class="link-chip" href="https://arxiv.org/search/?query=Samyadeb+Bhattacharya&searchtype=all&source=header" target="_blank" rel="noopener">arXiv ↗</a>
+        <a class="link-chip" href="CV.pdf" target="_blank">Curriculum Vitae ↗</a>
+      </div>
+      <p class="small" style="margin-top:18px">Professional contact details can be added here when you would like them publicly displayed.</p>
+    </div>
   </div>
 </section>
 </main>
@@ -168,6 +241,7 @@ footer a{color:#d9e8f5}
     <strong>Samyadeb Bhattacharya</strong>
     <p>Quantum Science & Technology · Quantum Information · Thermodynamics · Quantum Device Engineering</p>
     <p><a href="#top">Back to top ↑</a></p>
+    <p class="small" style="color:#8fa4b6">Academic homepage · Hosted with GitHub Pages</p>
   </div>
 </footer>
 </body>
